@@ -1,4 +1,4 @@
-# Requirements
+# NeoVim & Config
 ## Install
 First install nvim via brew
 ```
