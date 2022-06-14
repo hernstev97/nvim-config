@@ -13,6 +13,12 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
+" taboo for vim tab control
+Plug 'gcmt/taboo.vim'
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 " git
 Plug 'airblade/vim-gitgutter'
 
@@ -37,6 +43,10 @@ inoremap jk <ESC>
 nmap <C-n> :NERDTreeToggle<CR>
 
 set encoding=utf-8
+
+let NERDTreeShowHidden=1
+
+set modifiable
 
 " COC CONFIG START
 
@@ -75,6 +85,7 @@ inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
+
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
@@ -235,6 +246,9 @@ let g:ale_fixers = {
 let g:ale_sign_error = '❌'
 let g:ale_sign_warning = '⚠️'
 let g:ale_fix_on_save = 1
+
+let g:NERDTreeWinSize=75
+set statusline =%4*\ %<%F%*
 
 " sync open file with NERDTree
 " " Check if NERDTree is open or active
